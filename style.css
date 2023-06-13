@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    color:rgb(56, 100, 63);
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #000000;
+    background-image: linear-gradient(0deg, #000000 0%, #023007 100%);
+}
+
+h1{
+    font-size: 3rem;
+    
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 999;
+    text-align: center;
+}
+
+
+.mainContent{
+    background-color: rgb(255, 255, 255, 0.1);
+    margin: 0 10%;
+    padding: 10px;
+}
+
+.mainImage{
+    display: block;
+    margin: 1rem auto;
+    width:80%;
+}
+
+header{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+nav li{
+    float:center;
+    list-style-type: none;
+    display:inline;
+    margin: 0 1%;
+}
+
+a:link, a:visited {
+    background-color: rgb(42, 71, 50);
+    color: black;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+}
+
+a:hover, a:active {
+    background-color: green;
+    color: white;
+}
