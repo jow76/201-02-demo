@@ -114,7 +114,82 @@ function quiz(){
         score++;
         // console.log(score)
     }
-    alert("Thank you for taking the quiz! You scored " + score + "/5!")
+    
+    if(score === 5){
+        alert("BONUS ROUND!")
+        let ans6;
+        let guesses = 4;
+        let attempts = 0;
+        function randNum(){
+            return Math.floor(Math.random() * 9) +1;
+        }
+        let mysteryNum = randNum();
+        console.log(mysteryNum);
+        let ans7;
+        let ans8;
 
+        while(guesses > 0){
+            ans6=prompt("I'm thinking of a number from 1 to 10. You have " + guesses + " attempts remaining.")
+            if(isNaN(ans6)){
+                alert("Please enter a number from 1-10 (Don't spell it out!)")
+            }
+            else{
+                attempts++;
+                guesses--;
+                if(ans6 > mysteryNum){
+                    alert("My number is lower than " + ans6 + ".")
+                }
+                else if(ans6 < mysteryNum){
+                    alert("My number is higher than " + ans6 + ".")
+                }
+                else{
+                    alert("That's right! You got it in " + attempts + " guesses!")
+                    score+=guesses;
+                    guesses = -1;
+                }
+            }
+        }
+        if(guesses===0){
+            alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
+        }
+        else{
+            alert("You gained 1 point for every attempt remaining!")
+        }
+
+        guesses = 6
+        attempts = 0
+
+        while(guesses > 0){
+            ans7=prompt("Name one of my top 10 artists of all time on Last.fm. You have " + guesses + " attempts remaining.").toLowerCase();
+            attempts++;
+            guesses--;
+            if(ans7=="bladee" || ans7=="yung lean" || ans7=="jesus loves junkies" || ans7=="bones" || ans7=="wavves" || ans7=="sybyr" || ans7=="urfaust" || ans7=="sickboyrari" || ans7=="death grips" || ans7=="kings of leon"){
+                alert("Correct! You got one in " + attempts + " guesses!")
+                score+=guesses;
+                guesses = -1;
+            }
+            else{
+                alert("That's not correct. Try again!")                
+            }
+        }
+        alert("Possible answers were: Bladee, Yung Lean, Jesus Loves Junkies, Bones, Wavves, Sybyr, Urfaust, Sickboyrari, Death Grips or Kings of Leon.")
+        if(guesses===0){
+            alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
+        }
+        else{
+            alert("You gained 1 point for every attempt remaining!")
+        }
+
+        alert("Thank you for taking the quiz! You scored " + score + "/13!")
+
+    }
+    else{
+        alert("Thank you for taking the quiz! You scored " + score + "/5!")
+    }
+
+
+    
+    
+    
     return ans1, ans2, ans3, ans4, ans5, score;
 }
