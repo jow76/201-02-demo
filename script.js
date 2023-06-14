@@ -118,7 +118,7 @@ function quiz(){
     if(score === 5){
         alert("BONUS ROUND!")
         let ans6;
-        let guesses = 4;
+        let guesses = 3;
         let attempts = 0;
         function randNum(){
             return Math.floor(Math.random() * 9) +1;
@@ -155,7 +155,7 @@ function quiz(){
             alert("You gained 1 point for every attempt remaining!")
         }
 
-        guesses = 6
+        guesses = 5
         attempts = 0
 
         while(guesses > 0){
