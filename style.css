@@ -14,6 +14,9 @@ body{
     background-image: linear-gradient(0deg, #000000 0%, #023007 100%);
     height:100%;
     max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .smallPage{
@@ -51,13 +54,12 @@ h3{
 
 
 header{
-    margin: 1rem 30% 3rem 30%;
+    margin: 1rem 10% 3rem 10%;
     text-align: center;
     background-color: #000000;
     border:10px;
     border-style: dotted;
     border-radius: 10%;
-    
 }
 
 nav li{
@@ -91,10 +93,23 @@ nav a:hover, a:active {
     list-style:decimal ;
 }
 
+#workList{
+    margin-left: 5%;;
+    list-style: square;
+}
+
 .abtLink:link, .abtLink:visited{
     color:aqua
 }
 
 .abtLink:hover, .abtLink:active{
     color:white;
+}
+
+footer{
+    max-width: 800px;
+    padding: 3rem 5px 5px 5px;
+    background-color: #000000;
+    margin-left: auto;
+    margin-right: auto;
 }
