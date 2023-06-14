@@ -124,7 +124,6 @@ function quiz(){
             return Math.floor(Math.random() * 9) +1;
         }
         let mysteryNum = randNum();
-        console.log(mysteryNum);
         let ans7;
         let ans8;
 
