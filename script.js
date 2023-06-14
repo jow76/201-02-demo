@@ -3,7 +3,9 @@
 let userName;
 
 function getName(){
-    userName = prompt("Before entering the about page, please tell me your name:")
+    while(!userName){
+        userName = prompt("Before entering the about page, please tell me your name:")
+    }
     // console.log("Welcome, " + userName + "!")
     alert("Welcome, " + userName + "!")
 }
