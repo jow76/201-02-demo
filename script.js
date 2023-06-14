@@ -186,9 +186,5 @@ function quiz(){
         alert("Thank you for taking the quiz! You scored " + score + "/5!")
     }
 
-
-    
-    
-    
-    return ans1, ans2, ans3, ans4, ans5, score;
+    return ans1, ans2, ans3, ans4, ans5, ans6, ans7, score;
 }

@@ -1,1 +1,2 @@
-# 201-02-demo
+![My lighthouse score](lighthouse1.PNG)
+I'm happy with a score of 91 for my personal site. I understand the first point about colour contrast and will be sure to make sites easier to read when making more professional stuff. I'll take a look into the heading elements.
