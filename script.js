@@ -125,8 +125,7 @@ function quiz(){
         }
         let mysteryNum = randNum();
         let ans7;
-        let ans8;
-
+        
         while(guesses > 0){
             ans6=prompt("I'm thinking of a number from 1 to 10. You have " + guesses + " attempts remaining.")
             if(isNaN(ans6)){
