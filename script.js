@@ -18,6 +18,7 @@ let ans5;
 let score = 0;
 
 function quiz(){
+
     alert("Click OK to begin. Best of luck!")
 
     ans1=prompt("Do I prefer dogs over cats?").toLowerCase(); 
@@ -164,12 +165,13 @@ function quiz(){
 
             guesses = 4
             attempts = 0
+            const artists = ["bladee","yung lean", "jesus loves junkies", "bones", "wavves", "sybyr", "urfaust", "sickboyrari", "death grips", "kings of leon"]
 
             while(guesses > 0){
                 ans7=prompt("Name one of my top 10 artists of all time on Last.fm. You have " + guesses + " attempts remaining.").toLowerCase();
                 attempts++;
                 guesses--;
-                if(ans7=="bladee" || ans7=="yung lean" || ans7=="jesus loves junkies" || ans7=="bones" || ans7=="wavves" || ans7=="sybyr" || ans7=="urfaust" || ans7=="sickboyrari" || ans7=="death grips" || ans7=="kings of leon"){
+                if(artists.includes(ans7)){
                     alert("Correct! You got one in " + attempts + " guesses!")
                     score+=guesses;
                     guesses = -1;
