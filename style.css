@@ -59,6 +59,23 @@ h3{
     background-color: #000000;
 }
 
+.stickyCabbit{
+    position:fixed;
+    width:5%;
+    right:1%;
+    bottom:2%;
+    animation: rotate 1s linear infinite;
+
+}
+
+.stickyCabbit:hover{
+    animation: none;
+}
+
+@keyframes rotate{
+    to{transform: rotate(-360deg);}
+}
+
 
 header{
     margin: 1rem 10% 3rem 10%;
