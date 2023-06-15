@@ -121,7 +121,7 @@ function quiz(){
         let guesses = 3;
         let attempts = 0;
         function randNum(){
-            return Math.floor(Math.random() * 9) +1;
+            return Math.floor(Math.random() * 10) +1;
         }
         let mysteryNum = randNum();
         let ans7;
