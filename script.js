@@ -125,10 +125,16 @@ function quiz(){
         }
         let mysteryNum = randNum();
         let ans7;
+        let cancelled=false;
         
         while(guesses > 0){
             ans6=prompt("I'm thinking of a number from 1 to 10. You have " + guesses + " attempts remaining.")
-            if(isNaN(ans6)){
+            if(ans6 === null){
+                cancelled=true;
+                guesses= -1;
+                break;
+            }
+            else if(isNaN(ans6)){
                 alert("Please enter a number from 1-10 (Don't spell it out!)")
             }
             else{
@@ -147,39 +153,40 @@ function quiz(){
                 }
             }
         }
-        if(guesses===0){
-            alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
-        }
-        else{
-            alert("You gained 1 extra point for every attempt remaining!")
-        }
-
-        guesses = 4
-        attempts = 0
-
-        while(guesses > 0){
-            ans7=prompt("Name one of my top 10 artists of all time on Last.fm. You have " + guesses + " attempts remaining.").toLowerCase();
-            attempts++;
-            guesses--;
-            if(ans7=="bladee" || ans7=="yung lean" || ans7=="jesus loves junkies" || ans7=="bones" || ans7=="wavves" || ans7=="sybyr" || ans7=="urfaust" || ans7=="sickboyrari" || ans7=="death grips" || ans7=="kings of leon"){
-                alert("Correct! You got one in " + attempts + " guesses!")
-                score+=guesses;
-                guesses = -1;
+        
+        while(cancelled === false){
+            if(guesses===0){
+                alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
             }
             else{
-                alert("That's not correct. Try again!")                
+                alert("You gained 1 extra point for every attempt remaining!")
+            }
+
+            guesses = 4
+            attempts = 0
+
+            while(guesses > 0){
+                ans7=prompt("Name one of my top 10 artists of all time on Last.fm. You have " + guesses + " attempts remaining.").toLowerCase();
+                attempts++;
+                guesses--;
+                if(ans7=="bladee" || ans7=="yung lean" || ans7=="jesus loves junkies" || ans7=="bones" || ans7=="wavves" || ans7=="sybyr" || ans7=="urfaust" || ans7=="sickboyrari" || ans7=="death grips" || ans7=="kings of leon"){
+                    alert("Correct! You got one in " + attempts + " guesses!")
+                    score+=guesses;
+                    guesses = -1;
+                }
+                else{
+                    alert("That's not correct. Try again!")                
+                }
+            }
+            alert("Possible answers were: Bladee, Yung Lean, Jesus Loves Junkies, Bones, Wavves, Sybyr, Urfaust, Sickboyrari, Death Grips or Kings of Leon.")
+            if(guesses===0){
+                alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
+            }
+            else{
+                alert("You gained 1 extra point for every attempt remaining!")
             }
         }
-        alert("Possible answers were: Bladee, Yung Lean, Jesus Loves Junkies, Bones, Wavves, Sybyr, Urfaust, Sickboyrari, Death Grips or Kings of Leon.")
-        if(guesses===0){
-            alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
-        }
-        else{
-            alert("You gained 1 extra point for every attempt remaining!")
-        }
-
         alert("Thank you for taking the quiz! You scored " + score + "/10!")
-
     }
     else{
         alert("Thank you for taking the quiz! You scored " + score + "/5!")
