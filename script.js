@@ -151,10 +151,10 @@ function quiz(){
             alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
         }
         else{
-            alert("You gained 1 point for every attempt remaining!")
+            alert("You gained 1 extra point for every attempt remaining!")
         }
 
-        guesses = 5
+        guesses = 4
         attempts = 0
 
         while(guesses > 0){
@@ -175,10 +175,10 @@ function quiz(){
             alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
         }
         else{
-            alert("You gained 1 point for every attempt remaining!")
+            alert("You gained 1 extra point for every attempt remaining!")
         }
 
-        alert("Thank you for taking the quiz! You scored " + score + "/13!")
+        alert("Thank you for taking the quiz! You scored " + score + "/10!")
 
     }
     else{
