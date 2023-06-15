@@ -178,13 +178,15 @@ function quiz(){
                     alert("That's not correct. Try again!")                
                 }
             }
-            alert("Possible answers were: Bladee, Yung Lean, Jesus Loves Junkies, Bones, Wavves, Sybyr, Urfaust, Sickboyrari, Death Grips or Kings of Leon.")
             if(guesses===0){
                 alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
+                alert("Possible answers were: Bladee, Yung Lean, Jesus Loves Junkies, Bones, Wavves, Sybyr, Urfaust, Sickboyrari, Death Grips or Kings of Leon.")
             }
             else{
+                alert("Possible answers were: Bladee, Yung Lean, Jesus Loves Junkies, Bones, Wavves, Sybyr, Urfaust, Sickboyrari, Death Grips or Kings of Leon.")
                 alert("You gained 1 extra point for every attempt remaining!")
             }
+            cancelled=true;
         }
         alert("Thank you for taking the quiz! You scored " + score + "/10!")
     }
