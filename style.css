@@ -19,6 +19,10 @@ body{
 
 }
 
+.bigWideBody{
+    max-width:100%;
+}
+
 .smallPage{
     height:100vh;
 }
@@ -138,8 +142,7 @@ ol{
 }
 
 .mainAudio{
-        margin-left:auto;
-        margin-right: auto;
+    margin: 10px auto;
 }
 
 footer{
@@ -148,4 +151,12 @@ footer{
     background-color: #000000;
     margin-left: auto;
     margin-right: auto;
+}
+
+input{
+    margin: 1rem 40%;
+}
+
+#spawnerButton{
+    margin: 1rem 46.5%;
 }

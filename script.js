@@ -181,11 +181,10 @@ function quiz(){
                 }
             }
             if(guesses===0){
-                alert("Sorry! You ran out of attempts! My number was " + mysteryNum + ".")
-                alert("Possible answers were: Bladee, Yung Lean, Jesus Loves Junkies, Bones, Wavves, Sybyr, Urfaust, Sickboyrari, Death Grips or Kings of Leon.")
+                alert("Sorry! You ran out of attempts! Possible answers were: " + artists + ".")
             }
             else{
-                alert("Possible answers were: Bladee, Yung Lean, Jesus Loves Junkies, Bones, Wavves, Sybyr, Urfaust, Sickboyrari, Death Grips or Kings of Leon.")
+                alert("Possible answers were: " + artists + ".")
                 alert("You gained 1 extra point for every attempt remaining!")
             }
             cancelled=true;
@@ -197,4 +196,19 @@ function quiz(){
     }
 
     return ans1, ans2, ans3, ans4, ans5, ans6, ans7, score;
+}
+
+
+
+
+function theSpawner(){
+    let cabbitNum = document.getElementById("spawnNum").value
+    console.log("Peaber")
+    while(cabbitNum>0){
+        console.log("Swag")
+        let img = document.createElement("img");
+        img.src="cabbit.jpg";
+        document.body.appendChild(img);
+        cabbitNum --;
+    }
 }
